@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demokgok <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/15 10:00:17 by demokgok          #+#    #+#             */
-/*   Updated: 2020/07/16 14:09:37 by demokgok         ###   ########.fr       */
+/*   Created: 2020/07/17 12:27:09 by demokgok          #+#    #+#             */
+/*   Updated: 2020/07/17 16:27:34 by demokgok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-int ft_recursive_power(int nb, int power)
+int ft_sqrt(int nb);
 {
-	if (power < 0)
-		return (0);
-	if (power > 0)
-		return (nb *ft_recursive_power(nb, power -1))
-	else
-		return(1);
+	int sqrt;
+	{
+	if(nb == 4)
+		return(2);
+	}
+	sqrt=1;
+		while(sqrt*sqrt<=nb)
+			--sqrt;
+	{
+		if(sqrt*sqrt == nb)
+			return(sqrt);
+	}
+	return (0);
+}
